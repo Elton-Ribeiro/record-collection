@@ -1,6 +1,10 @@
 ## Spring + Angular CRUD <br>
 
-Teste Spring - [ok] <br>
-Teste Angular - [  ]  <br>
-
+**Back-end:** 80% done <br>
+**Front-end:** 10% done <br>
 ___
+
+Spring - [ok] <br>
+Angular - [__]  <br>
+
+
