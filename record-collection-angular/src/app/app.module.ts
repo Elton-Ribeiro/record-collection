@@ -3,22 +3,33 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ArtistDetailsComponent } from './component/artist-details/artist-details.component';
-import { ArtistCreateComponent } from './component/artist-create/artist-create.component';
-import { ArtistListComponent } from './component/artist-list/artist-list.component';
-import { ArtistUpdateComponent } from './component/artist-update/artist-update.component';
+import { ArtistDetailsComponent } from './components/artist-details/artist-details.component';
+import { ArtistCreateComponent } from './components/artist-create/artist-create.component';
+import { ArtistUpdateComponent } from './components/artist-update/artist-update.component';
+import { ArtistListComponent } from './components/artist-list/artist-list.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClient } from '@angular/common/http';
+import { MatTableModule } from '@angular/material/table';
+import { MatTableDataSource } from '@angular/material/table';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ArtistDetailsComponent,
     ArtistCreateComponent,
-    ArtistListComponent,
-    ArtistUpdateComponent,    
+    ArtistUpdateComponent,
+    ArtistListComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    HttpClient,
+    MatTableModule,
+    MatTableDataSource
   ],
   providers: [],
   bootstrap: [AppComponent]
