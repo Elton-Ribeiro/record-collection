@@ -1,18 +1,19 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ArtistDetailsComponent } from './components/artist-details/artist-details.component';
 import { ArtistCreateComponent } from './components/artist-create/artist-create.component';
-import { ArtistUpdateComponent } from './components/artist-update/artist-update.component';
+import { ArtistDetailsComponent } from './components/artist-details/artist-details.component';
 import { ArtistListComponent } from './components/artist-list/artist-list.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClient } from '@angular/common/http';
-import { MatTableModule } from '@angular/material/table';
-import { MatTableDataSource } from '@angular/material/table';
-
+import { ArtistUpdateComponent } from './components/artist-update/artist-update.component';
 
 @NgModule({
   declarations: [
@@ -20,16 +21,18 @@ import { MatTableDataSource } from '@angular/material/table';
     ArtistDetailsComponent,
     ArtistCreateComponent,
     ArtistUpdateComponent,
-    ArtistListComponent
+    ArtistListComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    HttpClient,
     MatTableModule,
-    MatTableDataSource
+    FormsModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

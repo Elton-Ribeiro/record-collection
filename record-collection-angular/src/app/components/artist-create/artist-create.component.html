@@ -1,1 +1,30 @@
-<p>artist-create works!</p>
+<div class="row">
+    <div class="card col-md-6 offset-md-3 offset-md-3">
+        <div class="row">
+            <h3 class="text-center"> Create Artist </h3>
+            <hr/>
+            <div class="card-body">
+                <form (ngSubmit)="onSubmit()">
+
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" id="name" [(ngModel)]="artist.name" name="name">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Album</label>
+                        <input type="text" class="form-control" id="album" [(ngModel)]="artist.album" name="album">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Year</label>
+                        <input type="number" class="form-control" id="year" [(ngModel)]="artist.year" name="year">
+                    </div>
+                    <br/>
+                    <button class="btn btn-success" type="submit">Submit</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
