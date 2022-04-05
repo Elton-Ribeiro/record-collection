@@ -6,6 +6,8 @@ ___
 For future reference: 
 
 - Angular CLI 13.3.0
+- Angular Material 13.3.2
+- Bootstrap 5.1
 - Node 16.14.2
 - npm 8.5.0 Package Manager
 - OS win32 x64 21H2 19044.1586
