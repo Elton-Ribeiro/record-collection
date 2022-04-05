@@ -1,4 +1,4 @@
-## Spring + Angular CRUD <br>
+## Records Collection Database - Spring + Angular <br>
 
 ✅ **Back-end:** 100% OK <br>
 ✅ **Database:** 100% OK <br>
