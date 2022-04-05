@@ -28,10 +28,10 @@
       <th mat-header-cell *matHeaderCellDef class="TableHeaderRow">Actions</th>
       <tr>
         <mat-cell *matCellDef="let artist">
-          <button mat-stroked-button color="accent" style="margin: 0.2rem;" (click)="artistDetails">
+          <button mat-stroked-button color="accent" style="margin: 0.2rem;" (click)="artistDetails(artist)">
             <mat-icon>list</mat-icon>
           </button>
-          <button mat-stroked-button color="primary" style="margin: 0.2rem;" (click)="artistUpdate">
+          <button mat-stroked-button color="primary" style="margin: 0.2rem;" (click)="artistUpdate(artist)">
             <mat-icon>edit</mat-icon>
           </button>
           <button mat-stroked-button color="danger" style="margin: 0.2rem;" (click)="artistDelete(artist)">

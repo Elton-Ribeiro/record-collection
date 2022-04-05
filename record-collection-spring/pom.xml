@@ -6,18 +6,17 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.6.5</version>
+		<version>2.6.6</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.myalbuns</groupId>
-	<artifactId>project</artifactId>
+	<groupId>com.myalbums</groupId>
+	<artifactId>Projeto-WebServices-Sprig-JPA-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>project</name>
-	<description>Projeto Spring e Angular</description>
+	<name>Projeto-WebServices-Sprig-JPA-1</name>
+	<description>Spring back-end with angular interface</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
-
 	<dependencies>
 
 		<dependency>
@@ -28,6 +27,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>5.3.18</version>
 		</dependency>
 
 		<dependency>
@@ -42,7 +47,7 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<scope>runtime</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
