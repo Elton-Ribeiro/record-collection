@@ -1,7 +1,8 @@
 ## Spring + Angular CRUD <br>
 
 ✅ **Back-end:** 100% OK <br>
-🟩 **Front-end:** 50% <br>
+✅ **Database:** 100% OK <br>
+🟩 **Front-end:** 30% <br>
 ___
 
 
