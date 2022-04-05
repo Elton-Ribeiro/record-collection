@@ -1,7 +1,13 @@
 ## Spring + Angular CRUD <br>
 
-**Back-end:** 90% done - [__]  <br>
-**Front-end:** 30% done - [__]  <br>
+✅ **Back-end:** 100% OK <br>
+🟩 **Front-end:** 50% <br>
+___
+
+
+![Screenshot 2022-04-05 at 12-56-49 RecordCollectionAngular](https://user-images.githubusercontent.com/65719821/161837711-a57965e0-f450-4cb1-905d-7857c86cc549.png)
+
+
 ___
 For future reference: 
 
