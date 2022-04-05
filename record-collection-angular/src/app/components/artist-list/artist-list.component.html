@@ -1,79 +1,69 @@
-<div class="row">
-  <h2> Albuns List</h2>
-</div>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-<div>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Name Column -->
+  <ng-container matColumnDef="name" class="name-column">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let artist"> {{ artist.name }} </td>
+  </ng-container>
+  <!-- Album Column -->
+  <ng-container matColumnDef="album" class="album-column">
+    <th mat-header-cell *matHeaderCellDef> Album </th>
+    <td mat-cell *matCellDef="let artist"> {{ artist.album }} </td>
+  </ng-container>
+  <!-- Year Column -->
+  <ng-container matColumnDef="year" class="year-column">
+    <th mat-header-cell *matHeaderCellDef> Year </th>
+    <td mat-cell *matCellDef="let artist"> {{ artist.year }} </td>
+  </ng-container>
+  <!-- Buttons -->
+  <ng-container matColumnDef="actions" class="actions-column">
+    <th mat-header-cell *matHeaderCellDef>Actions</th>
+    <td class="buttons">
+      <mat-cell *matCellDef="let artist">
+        <button (click)="artistDetails(artist.id)" mat-stroked-button color="accent" style="margin: 0.2rem; margin-top: 0.4rem;">
+          <mat-icon>list</mat-icon>
+        </button>
+        <button (click)="artistUpdate(artist.id)" mat-stroked-button color="primary" style="margin: 0.2rem; margin-top: 0.4rem;">
+          <mat-icon>edit</mat-icon>
+        </button>
+        <button (click)="artistDelete(artist.id)" mat-stroked-button color="danger" style="margin: 0.2rem; margin-top: 0.4rem;">
+          <mat-icon>delete</mat-icon>
+        </button>
+      </mat-cell>
+    </td>
+  </ng-container>
 
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Name </th>
-      <td mat-cell *matCellDef="let artist"> {{ artist.name }} </td>
-    </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 
-    <!-- Album Column -->
-    <ng-container matColumnDef="album">
-      <th mat-header-cell *matHeaderCellDef> Album </th>
-      <td mat-cell *matCellDef="let artist"> {{ artist.album }} </td>
-    </ng-container>
-
-    <!-- Year Column -->
-    <ng-container matColumnDef="year">
-      <th mat-header-cell *matHeaderCellDef> Year </th>
-      <td mat-cell *matCellDef="let artist"> {{ artist.year }} </td>
-    </ng-container>
-
-    <!-- Buttons -->
-    <ng-container matColumnDef="actions" class="buttons">
-      <th mat-header-cell *matHeaderCellDef class="TableHeaderRow">Actions</th>
-      <tr>
-        <mat-cell *matCellDef="let artist">
-          <button mat-stroked-button color="accent" style="margin: 0.2rem;" (click)="artistDetails(artist)">
-            <mat-icon>list</mat-icon>
-          </button>
-          <button mat-stroked-button color="primary" style="margin: 0.2rem;" (click)="artistUpdate(artist)">
-            <mat-icon>edit</mat-icon>
-          </button>
-          <button mat-stroked-button color="danger" style="margin: 0.2rem;" (click)="artistDelete(artist)">
-            <mat-icon>delete</mat-icon>
-          </button>
-        </mat-cell>
-      </tr>
-    </ng-container>
-
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
-  </table>
-</div>
+</table>
 
 
+<!-- HTML SIMPLES - ANGULAR + BOOTSTRAP -->
+<!-- 
+<table class = "table table-striped table-bordered">
 
-<!-- <button (click)="artistDetails" mat-button color="primary" style="margin-left: 10px">View</button>
-<button (click)="artistUpdate" mat-button color="primary">Update</button>
-<button (click)="artistDelete" mat-button color="danger" style="margin-left: 10px"> <mat-icon>delete</mat-icon> </button> -->
-
-
-
-<!-- <table class = "table table-striped table-bordered">
   <thead>
       <tr>
-          <th> Name</th>
+          <th> Name </th>
           <th> Album </th>
-          <th> Year</th>
+          <th> Year Id</th>
           <th> Actions </th>
       </tr>
   </thead>
+
   <tbody>
-      <tr  >
+      <tr *ngFor = "let artist of artists" >
           <td> {{ artist.name }} </td>
           <td> {{ artist.album }} </td>
           <td> {{ artist.year }} </td>
           <td>
-              <button (click) = "artistUpdate" class = "btn btn-primary"> Update</button>
-              <button (click) = "artistDelete" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
-              <button (click) = "artistDetails" class = "btn btn-primary" style="margin-left: 10px"> View</button>
+            <button (click) = "artistDetails(artist.id)" class = "btn btn-primary" style="margin-left: 0.1rem"> View</button>
+            <button (click) = "artistUpdate(artist.id)" class = "btn btn-primary" style="margin-left: 0.1rem"> Update</button>                            
+            <button (click) = "artistDelete(artist.id)" class = "btn btn-primary" style="margin-left: 0.1rem"> Delete</button>
           </td>
       </tr>
   </tbody>
-</table> -->
+
+</table>
+ -->
