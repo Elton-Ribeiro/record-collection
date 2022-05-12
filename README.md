@@ -8,8 +8,17 @@ ___
 
 ![Screenshot 2022-04-05 at 12-56-49 RecordCollectionAngular](https://user-images.githubusercontent.com/65719821/161837711-a57965e0-f450-4cb1-905d-7857c86cc549.png)
 
-
 ___
+
+| **Testing REST APIs**                                                         	|
+|-------------------------------------------------------------------------------	|
+| Get All Artists: GET - http://localhost:8080/api/v1/artists                   	|
+| Get Artist By Id: GET - http://localhost:8080/api/v1/artists/{artistId}       	|
+| Create Artist: POST - http://localhost:8080/api/v1/artists                    	|
+| Update Artist: POST - http://localhost:8080/api/v1/artists/{artistId}         	|
+| Delete Artist By Id: DELETE - http://localhost:8080/api/v1/artists/{artistId} 	|
+
+
 For future reference: 
 
 - Angular CLI 13.3.0
